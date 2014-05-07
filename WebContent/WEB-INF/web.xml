@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<context-param>
+		<param-name>LOG4J_CONFIG_LOCATION</param-name>
+		<param-value>/WEB-INF/classes/log4j.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+		      /WEB-INF/classes/config/spring/applicationContext_tomcat.xml
+		</param-value> 
+    </context-param>  
+    
+    <servlet>
+        <servlet-name>appServlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/classes/config/spring/config-servlet-context.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+  
+    <servlet-mapping>
+        <servlet-name>appServlet</servlet-name>
+        <url-pattern>/xr/*</url-pattern>
+    </servlet-mapping> 
+	
+	<servlet>
+		<servlet-name>JavaScript Resource Servlet</servlet-name>
+		<servlet-class>com.ibm.faces.webapp.JSResourceServlet</servlet-class>
+		<load-on-startup>-1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JavaScript Resource Servlet</servlet-name>
+		<url-pattern>/.ibmjsfres/*</url-pattern>
+	</servlet-mapping>
+	
+ 
+    <listener>
+    	 <listener-class>com.ussco.xref.listeners.Log4jListener</listener-class>
+  	</listener>
+  
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<login-config>
+        <auth-method>BASIC</auth-method>
+    </login-config>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<error-page> 
+		<exception-type>java.lang.Exception</exception-type> 
+		<location>/jsp/error.faces</location> 
+	</error-page>
+	
+    <error-page>
+        <error-code>401</error-code>
+        <location>/jsp/LoginFailure.faces</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/jsp/UnAuthorizedAccess.faces</location>
+    </error-page>
+			
+	<error-page> 
+		<error-code>404</error-code> 
+		<location>/jsp/error.faces</location> 
+	</error-page> 
+
+	<error-page> 
+		<error-code>500</error-code> 
+		<location>/jsp/error.faces</location> 
+	</error-page> 
+     
+    <mime-mapping> 
+    	<extension> xlsx </extension> 
+	    <mime-type> application/vnd.openxmlformats-officedocument.spreadsheetml.sheet </mime-type> 
+	</mime-mapping>
+        
+</web-app>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	<definition name="reportrequest" extends="layout">
+		<put-attribute name="pageTitle" value="CRIS - Reports" />
+		<put-attribute name="content" value="/WEB-INF/views/reports/reports.jsp" />
+		<put-attribute name="primaryMenuSelected" value="reportsLink" />
+
+		<put-list-attribute name="pageScripts">
+			<add-attribute value="xref/feature/reportsviewmodel.js" />
+		</put-list-attribute>
+	</definition>
+
+	<definition name="matchingrequest" extends="layout">
+		<put-attribute name="pageTitle" value="CRIS - Matching" />
+		<put-attribute name="content" value="/WEB-INF/views/reports/matching.jsp" />
+		<put-attribute name="primaryMenuSelected" value="matchingLink" />
+
+		<put-list-attribute name="pageScripts">
+            <add-attribute value="opensource/jquery.form.js" />
+			<add-attribute value="xref/feature/matchingviewmodel.js" />
+		</put-list-attribute>
+	</definition>
+
+    <definition name="singleitemsearch" extends="layout">
+        <put-attribute name="pageTitle" value="CRIS - Single Item Search" />
+        <put-attribute name="content" value="/WEB-INF/views/reports/search.jsp" />
+        <put-attribute name="primaryMenuSelected" value="searchLink" />
+
+        <put-list-attribute name="pageScripts">
+            <add-attribute value="xref/feature/searchviewmodel.js" />
+        </put-list-attribute>
+    </definition>
+
+</tiles-definitions>

@@ -1,0 +1,57 @@
+<ehcache>
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+        maxElementsInMemory="200"
+        eternal="false"
+        timeToIdleSeconds="600"
+        timeToLiveSeconds="600"
+        overflowToDisk="true"
+        diskPersistent="false"
+        diskExpiryThreadIntervalSeconds="120"
+        memoryStoreEvictionPolicy="LRU"/>
+
+   <!--
+	
+ <cache name="com.ussco.xref.methodCache"
+        maxElementsInMemory="800"
+        eternal="true"
+        overflowToDisk="false"/>
+
+ -->
+
+		<cache
+		    name="com.ussco.xref.domain.MchType"
+		    maxElementsInMemory="20"
+		    eternal="false"
+		    timeToIdleSeconds="600"
+		    timeToLiveSeconds="600"
+		    overflowToDisk="true"
+		/>
+
+
+       <cache
+		    name="com.ussco.xref.domain.XrefType"
+		    maxElementsInMemory="20"
+		    eternal="false"
+		    timeToIdleSeconds="600"
+		    timeToLiveSeconds="600"
+		    overflowToDisk="true"
+		/>
+       <cache
+		    name="com.ussco.xref.domain.Reseller"
+		    maxElementsInMemory="100"
+		    eternal="false"
+		    timeToIdleSeconds="600"
+		    timeToLiveSeconds="600"
+		    overflowToDisk="true"
+		/>
+
+
+
+
+
+
+
+</ehcache>

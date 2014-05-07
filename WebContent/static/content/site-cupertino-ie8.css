@@ -1,0 +1,137 @@
+.help-indicator-select {
+	height: 12px;
+	line-height: 12px;
+	margin-left: 6px;
+	float: left;
+	background-color: rgba(94, 152, 196, .6);
+	width: 12px;
+	margin-top: 10px;
+	border-radius: 8px;
+	font-size: 10px;
+	font-weight: bold;
+	color: #114D7A;
+	text-align: center;
+	cursor: pointer;
+}
+
+.help-indicator {
+    background-color: #83BADB;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px;
+ 	-webkit-border-radius: 8px;
+}
+
+.input-container SELECT {
+	padding-right: 7px;
+}
+
+#ssrForm .input-container SELECT {
+	width: 314px;
+}
+
+.repeatable-valueContainer {
+	width: 343px;
+}
+
+#notificationContacts .repeatable-valueContainer {
+	width: 314px;
+}
+
+.help-indicator {
+    background-color: #83BADB;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px;
+ 	-webkit-border-radius: 8px;
+}
+
+.input-container SELECT {
+	padding-right: 7px;
+}
+
+#ssrForm .input-container SELECT {
+	width: 314px;
+}
+
+#ssrForm.form-container {
+	border-top: solid 1px #fafafa;
+	border-bottom: solid 1px #fafafa;
+}
+
+.repeatable-valueContainer {
+	width: 340px;
+	border-right: 1px solid #99ACBF;
+	border-bottom: 1px solid #99ACBF;
+}
+
+#notificationContacts .repeatable-valueContainer {
+	width: 314px;
+}
+
+.item-info-bar {
+	border-bottom: 1px solid #aed0ea;
+}
+
+.ssr-item-info-bar {
+	border-top: 1px solid #AED0EA;
+}
+
+#nav ul li a:hover, #nav ul li:hover a, #nav ul li.hovered a, /*ul li span:hover,*/ #nav ul li:hover span, #nav ul li.hovered span {
+    border-color: #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+}
+
+.highlighted {
+	border-color: #CCCCCC;
+}
+
+.dropdown_list {
+	border-left: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+textarea {
+	width: 330px;
+}
+
+.rpc-binary-input {
+	float: left;
+}
+
+.rpc-binary-input-hidden {
+	width: 70px;
+	height: 25px;
+}
+
+.li-binary-input-hidden {
+	background-image: url(../images/fromLocal.PNG);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.repeatable-browseButton {
+	//margin-left: 0px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	padding-right: 6px;
+}
+
+.binary_dropdown_container {
+	margin-left: 6px;
+	height: 30px;
+	width: 62px;
+	float: left;
+}
+
+.binary-help-indicator {
+	margin-left: 10px;
+}
+
+#binary-dropdown ul li ul li a:hover {
+    text-decoration: none;
+}
+
+#field-definition ul li textarea {
+	margin-bottom: 5px;
+}
